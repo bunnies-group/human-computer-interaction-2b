@@ -2,6 +2,7 @@
 
 import Timer from './timer';
 import Util from './util';
+import { EOL } from 'os';
 
 export default class {
   /**
@@ -43,7 +44,7 @@ export default class {
 
     this._timer.stop();
 
-    this._results.innerText += (this._resultsCount ? ', ' : '') + this._reactionTime.innerText;
+    this._results.innerText += this._reactionTime.innerText + EOL;
     this._resultsCountField.innerText = ++this._resultsCount;
   }
 }
