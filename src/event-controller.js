@@ -11,13 +11,10 @@ export default class {
   constructor() {
     this._timer = new Timer();
 
-    const [reactionTime, results, resultsCountField] = Util.getElementsById([
+    [this._reactionTime, this._results, this._resultsCountField] = Util.getElementsById([
       'reactionTime', 'results', 'resultsCount'
     ]);
 
-    this._reactionTime = reactionTime;
-    this._results = results;
-    this._resultsCountField = resultsCountField;
     this._resultsCount = 0;
   }
 
