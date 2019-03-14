@@ -5,8 +5,8 @@ import Util from './util';
 
 const eventController = new EventController();
 
-const [circleStart, circleFinish, estimatedTime, sizeField, distanceField] = Util.getElementsById([
-  'circleStart', 'circleFinish', 'estimatedTime', 'sizeField', 'distanceField'
+const [circleStart, circleFinish, estimatedTime] = Util.getElementsById([
+  'circleStart', 'circleFinish', 'estimatedTime'
 ]);
 
 const answer = Util.askValidValue('Enter the diameter of the circles (5 or 20)', ['5', '20']);
@@ -20,9 +20,6 @@ const circleSize = answer + 'mm';
 const { offsetWidth: size, offsetLeft: offsetStart } = circleStart;
 const { offsetLeft: offsetFinish } = circleFinish;
 const distance = offsetFinish - offsetStart;
-
-sizeField.innerText = size;
-distanceField.innerText = distance;
 
 const a = 50, b = 150;
 
